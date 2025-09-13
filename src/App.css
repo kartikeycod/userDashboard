@@ -1,98 +1,94 @@
-/* App container */
-
-.html,body
-{
-   background: linear-gradient(145deg,rgb(198, 209, 230),rgb(7, 120, 195));
+/* Global background */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #222;
 }
+
+/* Main container */
 .app-container {
-  border-radius: 50px;
-  max-width: 1000px;
+  border-radius: 28px;
+  max-width: 1100px;
   margin: 48px auto;
-  padding: 0 24px 48px;
-  min-height: 100vh;
-  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* background-color: #faf9ff; */
-  background: linear-gradient(rgb(180, 80, 158),rgb(235, 31, 181));
-  color: #292d3e;
+  padding: 32px;
+  min-height: 90vh;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 
 /* Header */
 .header {
   text-align: center;
-  font-weight: 900;
-  font-size: 3rem;
-  color: #422aa8;
-  margin-bottom: 3rem;
-  letter-spacing: 2px;
-  text-shadow: 0 0 15px #beaafd66;
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-/* Change Email link */
+/* Change Email button */
 .change-email-button {
   display: block;
-  margin: 0 auto 40px;
-  background: none;
+  margin: 0 auto 36px;
+  padding: 10px 20px;
   border: none;
-  color: #7c3aed;
-  font-weight: 700;
+  border-radius: 12px;
+  font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  text-decoration: underline;
-  transition: color 0.3s ease;
-  user-select: none;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 .change-email-button:hover {
-  color: #5925a8;
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-2px);
 }
 
 /* Status texts */
 .loading-text,
-.no-report-text {
+.no-report-text,
+.error-text {
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #737393;
-  margin: 24px 0;
+  margin: 20px 0;
 }
 
 .error-text {
-  color: #ef4444;
-  font-weight: 700;
-  font-size: 1.15rem;
-  text-align: center;
-  margin: 24px 0;
-  text-shadow: 0 0 5px #ff6b6bcc;
+  color: #ff6b6b;
+  text-shadow: 0 0 8px rgba(255,107,107,0.5);
 }
 
-/* Responsive grid of cards */
+/* Report grid */
 .report-grid {
   display: grid;
   gap: 28px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* Individual report card */
+/* Report card */
 .report-card {
-  background: white;
-  border-radius: 18px;
-  box-shadow:
-    0 3px 12px rgba(107, 67, 180, 0.2),
-    0 8px 25px rgba(133, 93, 209, 0.15);
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  padding: 28px 24px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: default;
-  user-select: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .report-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow:
-    0 10px 25px rgba(107, 67, 180, 0.3),
-    0 20px 45px rgba(133, 93, 209, 0.25);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
 }
 
 /* Report header */
@@ -100,76 +96,62 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .report-title {
-  font-weight: 800;
-  font-size: 1.35rem;
-  color: #4e2f91;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
 }
 
+/* Priority badge */
 .priority-badge {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 0.85rem;
-  padding: 6px 18px;
-  border-radius: 30px;
-  color: white;
-  text-shadow: 0 0 6px rgba(0,0,0,0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #fff;
   user-select: none;
   white-space: nowrap;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* Priority globals */
+/* Priority colors */
 .priority-high {
-  background: #b91c1c;
-  box-shadow: 0 0 12px #dc2626aa;
+  background: #e63946;
 }
-
 .priority-medium {
-  background: #ca8a04;
-  box-shadow: 0 0 12px #facc15aa;
-  color: #3c322d;
+  background: #f4a261;
+  color: #222;
 }
-
 .priority-low {
-  background: #15803d;
-  box-shadow: 0 0 12px #16a34aaa;
+  background: #2a9d8f;
 }
 
 /* Report image */
 .report-image {
   width: 100%;
   border-radius: 14px;
-  overflow: hidden;
   max-height: 180px;
   object-fit: cover;
-  box-shadow:
-    0 2px 6px rgba(107, 67, 180, 0.15),
-    0 6px 10px rgba(133, 93, 209, 0.15);
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 /* Report description */
 .report-description {
-  color: #5e5c70;
-  font-size: 1rem;
+  color: #e5e5e5;
+  font-size: 0.95rem;
   flex-grow: 1;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   line-height: 1.5;
-  font-weight: 500;
 }
 
-/* Report footer info */
+/* Footer */
 .report-footer {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: #857da7;
-}
-
-.report-footer-label {
-  opacity: 0.7;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ddd;
+  opacity: 0.9;
 }
