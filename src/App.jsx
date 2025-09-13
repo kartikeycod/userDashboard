@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
-import EmailInput from "./emailInput";
+import EmailInput from "./EmailInput";
 import "./App.css";
 
 const SUPABASE_URL = 'https://zdtmxoetngldbtwhckym.supabase.co';
