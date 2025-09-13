@@ -1,0 +1,175 @@
+/* App container */
+
+.html,body
+{
+   background: linear-gradient(145deg,rgb(198, 209, 230),rgb(7, 120, 195));
+}
+.app-container {
+  border-radius: 50px;
+  max-width: 1000px;
+  margin: 48px auto;
+  padding: 0 24px 48px;
+  min-height: 100vh;
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* background-color: #faf9ff; */
+  background: linear-gradient(rgb(180, 80, 158),rgb(235, 31, 181));
+  color: #292d3e;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #422aa8;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #beaafd66;
+}
+
+/* Change Email link */
+.change-email-button {
+  display: block;
+  margin: 0 auto 40px;
+  background: none;
+  border: none;
+  color: #7c3aed;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.change-email-button:hover {
+  color: #5925a8;
+}
+
+/* Status texts */
+.loading-text,
+.no-report-text {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #737393;
+  margin: 24px 0;
+}
+
+.error-text {
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-align: center;
+  margin: 24px 0;
+  text-shadow: 0 0 5px #ff6b6bcc;
+}
+
+/* Responsive grid of cards */
+.report-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Individual report card */
+.report-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow:
+    0 3px 12px rgba(107, 67, 180, 0.2),
+    0 8px 25px rgba(133, 93, 209, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.report-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 10px 25px rgba(107, 67, 180, 0.3),
+    0 20px 45px rgba(133, 93, 209, 0.25);
+}
+
+/* Report header */
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.report-title {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #4e2f91;
+}
+
+.priority-badge {
+  font-weight: 900;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 30px;
+  color: white;
+  text-shadow: 0 0 6px rgba(0,0,0,0.15);
+  user-select: none;
+  white-space: nowrap;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Priority globals */
+.priority-high {
+  background: #b91c1c;
+  box-shadow: 0 0 12px #dc2626aa;
+}
+
+.priority-medium {
+  background: #ca8a04;
+  box-shadow: 0 0 12px #facc15aa;
+  color: #3c322d;
+}
+
+.priority-low {
+  background: #15803d;
+  box-shadow: 0 0 12px #16a34aaa;
+}
+
+/* Report image */
+.report-image {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  max-height: 180px;
+  object-fit: cover;
+  box-shadow:
+    0 2px 6px rgba(107, 67, 180, 0.15),
+    0 6px 10px rgba(133, 93, 209, 0.15);
+  margin-bottom: 22px;
+}
+
+/* Report description */
+.report-description {
+  color: #5e5c70;
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-bottom: 22px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Report footer info */
+.report-footer {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #857da7;
+}
+
+.report-footer-label {
+  opacity: 0.7;
+}
